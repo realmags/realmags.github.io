@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100vw;
+    background-image: url(../assets/grain-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.layout {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1.4rem 1rem;
+}

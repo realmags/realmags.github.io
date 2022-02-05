@@ -1,0 +1,69 @@
+.container {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 2.2rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.headingText {
+    width: 80%;
+    font-size: 5rem;
+    line-height: 1.1;
+}
+
+.subtitle {
+    width: 45%;
+}
+
+.subheading {
+    padding: 0 1rem;
+}
+
+.subheadingText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.role {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.role .first {
+    font-size: 1.5rem;
+}
+
+.role .second {
+    font-size: 1.3rem;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.divider span {
+    visibility: hidden;
+}
+/* 
+.divider svg:nth-child(1) {
+    rotate: 180deg;
+} */

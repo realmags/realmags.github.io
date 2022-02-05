@@ -14,3 +14,14 @@ export const LogoBg = () => (
     </svg>
 );
 
+export const BackSlash = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="50.828" height="40" viewBox="0 0 50.828 50.828">
+        <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M46.12339498 46.0236134C18.91013466 19.25940722 4.8044291 4.70462433 4.8044291 4.70462433"/>
+    </svg>
+
+);
+export const FrontSlash = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="50.828" height="40" viewBox="0 0 50.828 50.828">
+        <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M4.8044291 4.70462432C31.56862 31.91789967 46.12339498 46.02361341 46.12339498 46.02361341"/>
+    </svg>
+);
