@@ -1,0 +1,41 @@
+.header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.4rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titleContainer {
+    position: relative;
+    display: flex;
+}
+
+.titleText {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+
+.navList {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navItem {
+    padding-left: 2rem;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 699px) {
+    .navList {
+        flex-direction: column;
+        row-gap: 0.4rem;
+    }
+}

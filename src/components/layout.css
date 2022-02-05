@@ -53,6 +53,8 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: #000;
 }
 a:active,
 a:hover {
@@ -346,16 +348,19 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  /* margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
+  margin-bottom: 1.45rem; */
+  /* list-style-position: outside; */
+  /* list-style-image: none; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 ol {
   margin-left: 1.45rem;
@@ -488,9 +493,9 @@ dt {
 th {
   font-weight: bold;
 }
-li {
+/* li {
   margin-bottom: calc(1.45rem / 2);
-}
+} */
 ol li {
   padding-left: 0;
 }
