@@ -8,7 +8,7 @@ export default function Contact() {
         <Section title='Contact'>
             <div className={css.container}>
                 <div className={css.mail}>
-                    <h3>Wanna &nbsp;
+                    <h3>Wanna&nbsp;
                         <span className={css.emphasis}>collaborate</span>
                         <br />with me?
                     </h3>

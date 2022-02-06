@@ -20,3 +20,13 @@
     border: 1px solid #90AACB;
     border-radius: 80%;
 }
+
+@media (max-width: 699px) {
+    .mail h3 {
+        font-size: 1.8rem;
+    }
+
+    .mail p {
+        font-size: 1rem;
+    }
+}
