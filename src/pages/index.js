@@ -1,11 +1,12 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+// import { Link } from "gatsby"
+// import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
 import Section from '../components/section'
+import About from "../components/about"
 
 const IndexPage = () => (
   <Layout>
@@ -14,9 +15,7 @@ const IndexPage = () => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
     <Banner />
-    <Section title="About">
-      <p>this is about section</p>
-    </Section>
+    <About />
     {/* <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}
