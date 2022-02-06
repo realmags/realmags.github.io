@@ -1,5 +1,4 @@
 .container {
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column-reverse;
     row-gap: 2.2rem;

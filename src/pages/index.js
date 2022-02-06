@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
+import Section from '../components/section'
 
 const IndexPage = () => (
   <Layout>
@@ -13,7 +14,10 @@ const IndexPage = () => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
     <Banner />
-    <StaticImage
+    <Section title="About">
+      <p>this is about section</p>
+    </Section>
+    {/* <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}
       quality={95}
@@ -26,7 +30,7 @@ const IndexPage = () => (
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
       <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
       <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
+    </p> */}
   </Layout>
 )
 
