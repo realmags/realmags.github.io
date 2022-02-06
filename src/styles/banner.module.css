@@ -36,6 +36,7 @@
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
+    margin-bottom: 1.3rem;
 }
 
 .content {
@@ -50,19 +51,32 @@
     justify-content: flex-end;
 }
 
-.role .first {
+.first {
     font-size: 1.5rem;
 }
 
-.role .second {
+.second {
     font-size: 1.3rem;
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.divider span {
-    visibility: hidden;
+.divider span:first-of-type {
+    /* visibility: hidden; */
+    text-align: center;
+    font-size: 1.5rem;
 }
-/* 
-.divider svg:nth-child(1) {
-    rotate: 180deg;
-} */
+
+@media (max-width: 699px) {
+    .headingText {
+        font-size: 3.2rem;
+    }
+
+    .subtitle {
+        width: 65%;
+        max-width: 330px;
+    }
+
+    .first {
+        font-size: 1.3rem;
+    }
+}

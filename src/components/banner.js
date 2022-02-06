@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BackSlash, FrontSlash } from '../assets/svg-files';
+// import { BackSlash, FrontSlash } from '../assets/svg-files';
 import * as css from '../styles/banner.module.css'
 
 export default function Banner() {
@@ -20,8 +20,8 @@ export default function Banner() {
                         <span className={css.second}>developer</span>
                     </span>
                     <span className={css.divider}>
-                        <span>and</span>
-                        <BackSlash />
+                        <span>/</span>
+                        {/* <BackSlash /> */}
                         {/* <FrontSlash /> */}
                     </span>
                     <span className={css.role}>

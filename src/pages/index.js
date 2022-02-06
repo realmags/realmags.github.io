@@ -5,7 +5,6 @@ import * as React from "react"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
-import Section from '../components/section'
 import About from "../components/about"
 import Project from "../components/project"
 import Contact from "../components/contact"
