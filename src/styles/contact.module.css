@@ -1,0 +1,22 @@
+.container {
+    margin: 5rem 0;
+}
+
+.mail {
+    text-align: left;
+}
+
+.mail h3 {
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.mail p {
+    font-size: 1.2rem;
+}
+
+.emphasis {
+    border: 1px solid #90AACB;
+    border-radius: 80%;
+}
