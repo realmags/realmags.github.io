@@ -96,6 +96,9 @@
 
     .skillsHeading {
         transform: translateY(0);
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
     }
 
     .techWrapper {
