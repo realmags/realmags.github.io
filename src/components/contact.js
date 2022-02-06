@@ -5,7 +5,7 @@ import * as css from '../styles/contact.module.css'
 
 export default function Contact() {
     return (
-        <Section title='Contact'>
+        <Section title='Contact' to='contact'>
             <div className={css.container}>
                 <div className={css.mail}>
                     <h3>Wanna&nbsp;

@@ -8,7 +8,7 @@ import * as css from '../styles/project.module.css'
 export default function Project() {
     const test = [1,2,3,4]
     return (
-        <Section title='Projects'>
+        <Section title='Projects' to='projects'>
             <div className={css.container}>
                 {test.map((value, index) => {
                     if(index % 2 !== 0) {

@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import {AnchorLink} from 'gatsby-plugin-anchor-links'
 
 import * as css from '../styles/header.module.css'
 import {LogoBg} from '../assets/svg-files'
@@ -13,9 +14,9 @@ const Header = ({ siteTitle }) => (
     </span>
     <nav>
       <ul className={css.navList}>
-        <li className={css.navItem}><Link to='/'>About</Link></li>
-        <li className={css.navItem}><Link to='/'>Contact</Link></li>
-        <li className={css.navItem}><Link to='/'>Projects</Link></li>
+        <li className={css.navItem}><AnchorLink to='/#about'>About</AnchorLink></li>
+        <li className={css.navItem}><AnchorLink to='/#projects'>Projects</AnchorLink></li>
+        <li className={css.navItem}><AnchorLink to='/#contact'>Contact</AnchorLink></li>
       </ul>
     </nav>
   </header>

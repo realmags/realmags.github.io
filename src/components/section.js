@@ -6,7 +6,7 @@ import {useAnimation, motion} from 'framer-motion'
 
 import * as css from '../styles/section.module.css'
 
-export default function Section({title, children}) {
+export default function Section({title, children, to}) {
     const animation = useAnimation()
     const [inView, setInView] = useState(false);
     const variants = {
@@ -41,7 +41,7 @@ export default function Section({title, children}) {
     
 
     return (
-        <section className={css.section}>
+        <section className={css.section} id={to}>
             <div className={css.title}>
                 <h2>{title}</h2>
                 {/* <span className={css.line}></span> */}
@@ -58,5 +58,6 @@ export default function Section({title, children}) {
 
 Section.propTypes = {
     children: PropTypes.node.isRequired,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired
 }

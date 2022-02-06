@@ -6,15 +6,15 @@ import * as css from '../styles/about.module.css'
 
 export default function About() {
     return (
-        <Section title='About'>
+        <Section title='About' to='about'>
             <div className={css.container}>
                 <div className={css.aboutWrapper}>
                     <StaticImage
-                    src="../images/gatsby-astronaut.png"
+                    src="../images/me.jpg"
                     width={500}
                     quality={95}
                     formats={["auto", "webp", "avif"]}
-                    alt="A Gatsby astronaut"
+                    alt="Me posing by the bamboos"
                     style={{ marginBottom: `2rem` }}
                     />
                     <div className={css.aboutText}>
