@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import Banner from "../components/banner"
 import Section from '../components/section'
 import About from "../components/about"
+import Project from "../components/project"
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <p>Now go build something great.</p> */}
     <Banner />
     <About />
+    <Project />
     {/* <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}

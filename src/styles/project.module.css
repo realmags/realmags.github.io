@@ -1,0 +1,33 @@
+.container {
+    --offset: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    justify-items: center;
+    justify-content: center;
+    column-gap: 2.5rem;
+    row-gap: 3rem;
+    margin-top: calc(var(--offset) + 1rem);
+    margin-bottom: calc(var(--offset) * 2 + 1rem);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.transform {
+    transform: translateY(var(--offset));
+}
+
+.title {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.tags {
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(48, 47, 47, 0.932);
+}
