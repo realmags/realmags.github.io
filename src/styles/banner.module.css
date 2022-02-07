@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column-reverse;
     row-gap: 2.2rem;
+    margin: 2rem 0;
 }
 
 .heading {
@@ -24,6 +25,7 @@
 
 .subheading {
     padding: 0 1rem;
+    margin-bottom: 1rem;
 }
 
 .subheadingText {
@@ -60,7 +62,7 @@
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.divider span:first-of-type {
+.divider span {
     /* visibility: hidden; */
     text-align: center;
     font-size: 1.5rem;
@@ -77,6 +79,25 @@
     }
 
     .first {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1020px) {
+    .headingText {
+        font-size: 6rem;
+    }
+
+    .first, .article, .divider span {
+        font-size: 2rem;
+    }
+    
+    .second {
+        font-size: 1.7rem;
+        margin-top: 0.5rem;
+    }
+
+    .subtitle {
         font-size: 1.3rem;
     }
 }
