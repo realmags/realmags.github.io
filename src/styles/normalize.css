@@ -1,3 +1,21 @@
+/* ! Edit to use google fonts */
+@font-face {
+  font-family: 'Playfair Display Variable';
+  src: url('../assets/PlayfairDisplay-VariableFont_wght.ttf');
+  font-style: normal;
+  font-weight: 400 900;
+}
+@font-face {
+  font-family: 'Playfair Display Variable Italic';
+  src: url('../assets/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+  /* font-style: normal; */
+  font-weight: 400 900;
+}
+
+em {
+  font-family: 'Playfair Display Variable Italic';
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -10,15 +28,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+  font-family: 'Playfair Display Variable', 'Times New Roman', Times, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt", "wght";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt", "wght";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "wght";
+  font-feature-settings: "kern", "liga", "clig", "calt", "wght";
   overflow-x: hidden;
+  height: auto;
 }
 article,
 aside,
