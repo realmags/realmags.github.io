@@ -55,6 +55,7 @@
 
 .first {
     font-size: 1.5rem;
+    position: relative;
 }
 
 .second {
@@ -63,7 +64,6 @@
 }
 
 .divider span {
-    /* visibility: hidden; */
     text-align: center;
     font-size: 1.5rem;
 }

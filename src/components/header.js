@@ -1,13 +1,28 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-// import { Link } from "gatsby"
+
 import {AnchorLink} from 'gatsby-plugin-anchor-links'
+import {motion} from 'framer-motion'
 
 import * as css from '../styles/header.module.css'
 import {LogoBg} from '../assets/svg-files'
 
 const Header = ({ siteTitle }) => (
-  <header className={css.header}>
+  <motion.header
+  initial={{
+    opacity: 0,
+    y: -50
+  }}
+  animate={{
+    opacity: 1,
+    y: 0
+  }}
+  transition={{
+    ease: 'easeInOut',
+    duration: 0.8,
+    delay: 0.6
+  }}
+  className={css.header}>
     <span className={css.titleContainer}>
       <LogoBg />
       <span className={css.titleText}>{siteTitle}</span>
@@ -19,7 +34,7 @@ const Header = ({ siteTitle }) => (
         <li className={css.navItem}><AnchorLink to='/#contact'>Contact</AnchorLink></li>
       </ul>
     </nav>
-  </header>
+  </motion.header>
 )
 
 Header.propTypes = {
