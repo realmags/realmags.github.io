@@ -1,51 +1,22 @@
-import React, {useRef, useEffect} from 'react';
+import React from 'react';
 
 import * as css from '../styles/banner.module.css'
-import { motion, useViewportScroll, transform, useMotionValue } from 'framer-motion';
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 export default function Banner() {
-    // const headingRef = useRef()
-    // const {scrollYProgress} = useElementScroll(headingRef)
+    const yRange = [0, 0.2]
+    const wghtRange = [400, 600]
     const {scrollYProgress} = useViewportScroll()
-
-    // const wght = useTransform(scrollYProgress, yRange, wghtRange)
-    const wght = useMotionValue(400)
-
-    useEffect(() => {
-        function updateWght() {
-            const yRange = [0, 0.2]
-            const wghtRange = [400, 600]
-            const newWght = transform(scrollYProgress.get(), yRange, wghtRange)
-            wght.set(newWght)
-            console.log(wght.get())
-        }
-        
-        const unsubscribeY = scrollYProgress.onChange(updateWght)
-        // console.log(wght);
-
-        return () => unsubscribeY()
-        // return wght.onChange(v => console.log(`"wght" ${Math.ceil(v)}`))
-    }, [scrollYProgress, wght]);
-    
+    const wght = useTransform(scrollYProgress, yRange, wghtRange)
 
     return (
         <div className={css.container}>
             <motion.div 
-            // animate={{
-            //     scale: wght/400,
-            // }}
             className={css.heading}>
                 <motion.h1
                 style={{
-                    // scale: wght.get()
-                    fontWeight: wght
-                    // fontWeight: Math.ceil(wght),
-                    // fontVariationSettings: `"wght" ${Math.ceil(wght)}`,
-                    
+                    fontWeight: wght,
                 }}
-                // style={{
-                //     fontVariationSettings: `"wght" ${Math.ceil(wght)}`,
-                // }}
                 className={css.headingText}>
                     K<em>e</em>nt Bry<em>a</em>n
                     <br/>C. Magli<em>n</em>ao
@@ -63,8 +34,6 @@ export default function Banner() {
                         </span>
                         <span className={css.divider}>
                             <span>/</span>
-                            {/* <BackSlash /> */}
-                            {/* <FrontSlash /> */}
                         </span>
                         <span className={css.role}>
                             <span className={css.first}>computer</span>
