@@ -1,0 +1,136 @@
+.internalWrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.externalWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.bttnWrapper {
+    border: 2px solid #FFB085;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2rem;
+    cursor: pointer;
+}
+
+.bttnWrapper button {
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}
+
+.normalIcon {
+    width: 45px;
+    display: flex;
+}
+
+.smallIcon {
+    width: 25px;
+    display: flex;
+}
+
+.contentWrapper {
+    margin-top: 4rem;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.imgBg {
+    width: 100%;
+    background-color: #90AACB;
+    height: 600px;
+    max-height: 60vh;
+    /* test only */
+}
+
+.descWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.2rem 0;
+}
+
+.info {
+    font-size: 4rem;
+    font-style: italic;
+}
+
+/* .info::after {
+    content: ' /';
+} */
+
+.description {
+    width: 580px;
+    max-width: 60%;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+}
+
+.year {
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    align-self: flex-end;
+}
+
+.detailsWrapper {
+    display: flex;
+    justify-content: space-between;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    column-gap: 1rem;
+}
+
+.detailsContent span {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 3.5rem;
+    float: left;
+}
+
+.imgsWrapper {
+    width: 100%;
+    height: 600px;
+    max-height: 60vh;
+    background-color: #90AACB;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 699px) {
+    .bttnWrapper button {
+        font-size: 1.6rem;
+    }
+
+    .normalIcon {
+        width: 35px;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .info {
+        font-size: 2.6rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .detailsWrapper {
+        flex-direction: column;
+        row-gap: 2.3rem;
+    }
+}

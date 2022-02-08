@@ -25,3 +25,47 @@ export const FrontSlash = () => (
         <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M4.8044291 4.70462432C31.56862 31.91789967 46.12339498 46.02361341 46.12339498 46.02361341"/>
     </svg>
 );
+
+export const BackIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+        <g transform="matrix(3.4285714285714284,0,0,3.4285714285714284,0,0)"><g>
+        <line x1="13.5" y1="7" x2="0.5" y2="7"
+        style={{
+            fill: 'none',
+            stroke: '#000',
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round'
+        }}
+        ></line>
+        <polyline points="4 3.5 0.5 7 4 10.5" 
+        style={{
+            fill: 'none',
+            stroke: '#000',
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round'
+        }}
+        ></polyline>
+  </g></g></svg>
+)
+
+export const ExternalLinkIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <g transform="matrix(3.4285714285714284,0,0,3.4285714285714284,0,0)"><g>
+        <line x1="0.5" y1="13.5" x2="13.5" y2="0.5"
+        style={{
+            fill: 'none',
+            stroke: '#000',
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round'
+        }}
+        ></line>
+        <polyline points="8.5 0.5 13.5 0.5 13.5 5.5"
+        style={{
+            fill: 'none',
+            stroke: '#000',
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round'
+        }}
+        ></polyline>
+    </g></g></svg>
+)
