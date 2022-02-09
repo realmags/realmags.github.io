@@ -30,7 +30,7 @@ export default function Banner() {
             transition: {
                 ease: [0.6, 0.01, -0.05, 0.9],
                 // ease: 'easeIn',
-                duration: 1
+                // duration: 1
             }
         }
     }
@@ -87,7 +87,11 @@ export default function Banner() {
                 </motion.p>
             </motion.div>
             <div className={css.subheading}>
-                <p className={css.subheadingText}>
+                <motion.p 
+                variants={subheadingAnim}
+                initial='initial'
+                animate='animate'
+                className={css.subheadingText}>
                     <motion.span 
                     // variants={subheadingAnim}
                     className={css.article}>A</motion.span>
@@ -114,7 +118,7 @@ export default function Banner() {
                             className={css.second}>engineer</motion.span>
                         </motion.span>
                     </span>
-                </p>
+                </motion.p>
             </div>
         </motion.div>
     );

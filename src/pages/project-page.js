@@ -8,7 +8,6 @@ import Seo from '../components/seo'
 import { BackIcon, ExternalLinkIcon } from '../assets/svg-files';
 
 export default function ProjectPage({id, location}) {
-    const {x, y, width, height} = location.state
     const test = {
         title: 'Hallyu Store - Online Menu',
         description: 'A modest online menu solution that allows management of customer orders for a small food business.',
@@ -29,22 +28,24 @@ export default function ProjectPage({id, location}) {
                 }}
                 transition={{
                     delay: 1.6,
-                    duration: 1,
+                    duration: 0.8,
                     ease: [0.6, 0.01, -0.05, 0.9]
                 }}
                 className={css.title}>{test.title}</motion.h4>
                 <motion.div
                 initial={{
-                    // x: '50%',
                     y: "-50%",
+                    opacity: 0,
+                    scale: 0.2,
                     width: '50%',
-                    // height
+                    borderRadius: '100%'
                 }}
                 animate={{
-                    x: 0,
                     y: 0,
+                    opacity: 1,
+                    scale: 1,
                     width: '100%',
-                    // height: '600px'
+                    borderRadius: '0%'
                 }}
                 transition={{
                     delay: 0.2,
@@ -52,7 +53,7 @@ export default function ProjectPage({id, location}) {
                     ease: [0.6, 0.01, -0.05, 0.9]
                 }}
                 className={css.imgBg} >
-                    {x, y, width, height}
+                    {/* ! insert image here */}
                 </motion.div>
                 <div className={css.descWrapper}>
                     <span className={css.info}>info /</span>
