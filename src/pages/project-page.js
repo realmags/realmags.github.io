@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
 
 import * as css from '../styles/project-page.module.css'
 import Seo from '../components/seo'
 
 import { BackIcon, ExternalLinkIcon } from '../assets/svg-files';
 
-export default function ProjectPage({id}) {
+export default function ProjectPage({id, location}) {
+    const {x, y, width, height} = location.state
     const test = {
         title: 'Hallyu Store - Online Menu',
         description: 'A modest online menu solution that allows management of customer orders for a small food business.',
@@ -16,10 +18,42 @@ export default function ProjectPage({id}) {
             <Seo title='Project' />
             <InternalLink text='Back' to='/' icon={<BackIcon />} />
             <article className={css.contentWrapper}>
-                <h4 className={css.title}>{test.title}</h4>
-                <div className={css.imgBg}>
-                    {/* img */}
-                </div>
+                <motion.h4 
+                initial={{
+                    opacity: 0,
+                    y: -10,
+                }}
+                animate={{
+                    opacity: 1,
+                    y: 0
+                }}
+                transition={{
+                    delay: 1.6,
+                    duration: 1,
+                    ease: [0.6, 0.01, -0.05, 0.9]
+                }}
+                className={css.title}>{test.title}</motion.h4>
+                <motion.div
+                initial={{
+                    // x: '50%',
+                    y: "-50%",
+                    width: '50%',
+                    // height
+                }}
+                animate={{
+                    x: 0,
+                    y: 0,
+                    width: '100%',
+                    // height: '600px'
+                }}
+                transition={{
+                    delay: 0.2,
+                    duration: 1.4,
+                    ease: [0.6, 0.01, -0.05, 0.9]
+                }}
+                className={css.imgBg} >
+                    {x, y, width, height}
+                </motion.div>
                 <div className={css.descWrapper}>
                     <span className={css.info}>info /</span>
                     <p className={css.description}>

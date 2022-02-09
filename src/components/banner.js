@@ -13,8 +13,8 @@ export default function Banner() {
     const stagger = {
         animate: {
             transition: {
-                delayChildren: 0.4,
-                staggerChildren: 0.1
+                // delayChildren: 0.,
+                staggerChildren: 0.4
             }
         }
     }
@@ -22,13 +22,32 @@ export default function Banner() {
     const headingAnim = {
         initial: {
             opacity: 0,
-            y: 10
+            y: 80
         },
         animate: {
             opacity: 1,
             y: 0,
-            transition: [.19,1,.22,1],
-            duration: 1
+            transition: {
+                ease: [0.6, 0.01, -0.05, 0.9],
+                // ease: 'easeIn',
+                duration: 1
+            }
+        }
+    }
+
+    const subtitleAnim = {
+        initial: {
+            opacity: 0,
+            y: 20
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                ease: [0.6, 0.01, -0.05, 0.9],
+                // ease: 'easeIn',
+                // duration: 0.4
+            }
         }
     }
     
@@ -41,17 +60,17 @@ export default function Banner() {
             opacity: 1,
             y: 0,
             transition: [.19,1,.22,1],
-            duration: 1
+            duration: 2
         }
     }
 
     return (
         <motion.div 
-        variants={stagger}
-        initial='initial'
-        animate='animate'
         className={css.container}>
             <motion.div 
+            variants={stagger}
+            initial='initial'
+            animate='animate'
             className={css.heading}>
                 <motion.h1
                 variants={headingAnim}
@@ -61,7 +80,7 @@ export default function Banner() {
                     <br/>C. Magli<em>n</em>ao
                 </motion.h1>
                 <motion.p
-                variants={headingAnim}
+                variants={subtitleAnim}
                 className={css.subtitle}>
                     You can call me "Mags," all my friends do.
                     I like to design sickening websites and turn them to reality.
@@ -70,11 +89,11 @@ export default function Banner() {
             <div className={css.subheading}>
                 <p className={css.subheadingText}>
                     <motion.span 
-                    variants={subheadingAnim}
+                    // variants={subheadingAnim}
                     className={css.article}>A</motion.span>
                     <span className={css.content}>
                         <motion.span
-                        variants={subheadingAnim}
+                        // variants={subheadingAnim}
                         className={css.role}>
                             <motion.span 
                             className={css.first}>front-end</motion.span>
@@ -82,12 +101,12 @@ export default function Banner() {
                             className={css.second}>developer</motion.span>
                         </motion.span>
                         <motion.span
-                        variants={subheadingAnim}
+                        // variants={subheadingAnim}
                         className={css.divider}>
                             <span>/</span>
                         </motion.span>
                         <motion.span
-                        variants={subheadingAnim}
+                        // variants={subheadingAnim}
                         className={css.role}>
                             <motion.span 
                             className={css.first}>computer</motion.span>

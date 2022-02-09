@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
+import { motion } from "framer-motion"
 
 import Seo from "../components/seo"
 import Header from "../components/header"
@@ -12,13 +13,13 @@ import Contact from "../components/contact"
 const IndexPage = () => (
   <>
     <Header />
-    <main>
+    <motion.main exit={{opacity: 0}}>
       <Seo title="Home" />
       <Banner />
       <About />
       <Project />
       <Contact />
-    </main>
+    </motion.main>
     <p>
       <Link to="/project-page/">Go to project page</Link> <br />
       {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />

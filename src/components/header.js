@@ -21,19 +21,19 @@ const Header = () => {
 
   return (
     <motion.header
-    initial={{
-      opacity: 0,
-      y: -50
-    }}
-    animate={{
-      opacity: 1,
-      y: 0
-    }}
-    transition={{
-      ease: 'easeInOut',
-      duration: 0.8,
-      delay: 0.6
-    }}
+    // initial={{
+    //   opacity: 0,
+    //   y: -50
+    // }}
+    // animate={{
+    //   opacity: 1,
+    //   y: 0
+    // }}
+    // transition={{
+    //   ease: 'easeInOut',
+    //   duration: 0.8,
+    //   delay: 0.6
+    // }}
     className={css.header}>
       <span className={css.titleContainer}>
         <LogoBg />

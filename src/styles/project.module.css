@@ -17,6 +17,15 @@
     max-width: 320px;
 }
 
+.imgBg {
+    width: 100%;
+    border: 1rem solid #90AACB;
+    height: 600px;
+    max-height: 60vh;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
 .transform {
     transform: translateY(var(--offset));
 }

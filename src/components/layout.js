@@ -10,16 +10,19 @@ import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
 // import Header from "./header"
+import { AnimatePresence } from "framer-motion"
 import '../styles/normalize.css'
 import * as css from '../styles/layout.module.css'
 
 const Layout = ({ children }) => {
   return (
-    <div className={css.wrapper}>
-      <div className={css.layout}>
-        {children}
+    <AnimatePresence initial={true} exitBeforeEnter>
+      <div className={css.wrapper}>
+        <div className={css.layout}>
+          {children}
+        </div>
       </div>
-    </div>
+    </AnimatePresence>
   )
 }
 
