@@ -18,6 +18,7 @@
     "gatsby-plugin-sharp": "^4.6.0",
     "gatsby-plugin-styled-components": "^5.6.0",
     "gatsby-source-filesystem": "^4.6.0",
+    "gatsby-source-graphcms": "^2.8.0",
     "gatsby-transformer-sharp": "^4.6.0",
     "prop-types": "^15.8.0",
     "react": "^17.0.1",

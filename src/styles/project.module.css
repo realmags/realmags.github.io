@@ -19,9 +19,9 @@
 
 .imgBg {
     width: 100%;
-    border: 1rem solid #90AACB;
-    height: 600px;
-    max-height: 60vh;
+    /* border: 1rem solid #90AACB; */
+    /* height: 600px; */
+    /* max-height: 60vh; */
     overflow: hidden;
     margin: 0 auto;
 }

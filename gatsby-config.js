@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `KBCM`,
@@ -10,6 +14,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-anchor-links`,
+    {
+      resolve: `gatsby-source-graphcms`,
+      options: {
+        downloadLocalImages: true,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+      },
+    },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
