@@ -1,17 +1,42 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
+import {GatsbyImage} from 'gatsby-plugin-image'
 
 import * as css from '../styles/project-page.module.css'
 import Seo from '../components/seo'
 
 import { BackIcon, ExternalLinkIcon } from '../assets/svg-files';
 
-export default function ProjectPage({id, location}) {
-    const test = {
-        title: 'Hallyu Store - Online Menu',
-        description: 'A modest online menu solution that allows management of customer orders for a small food business.',
+
+export const query = graphql`
+    query ProductQuery($id: String!) {
+        project: graphCmsProject(id: {eq: $id}) {
+            title
+            description
+            tags
+            year
+            solution
+            challenge
+            bannerImage {
+                localFile {
+                    childImageSharp {
+                    gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR, height: 600)
+                    }
+                }
+            }
+            contentImages {
+                localFile {
+                    childImageSharp {
+                    gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR, height: 600)
+                    }
+                }
+            }
+        }
     }
+`
+
+export default function ProjectPage({data: {project}}) {
     return (
         <div className={css.container}> 
             <Seo title='Project' />
@@ -31,7 +56,7 @@ export default function ProjectPage({id, location}) {
                     duration: 0.8,
                     ease: [0.6, 0.01, -0.05, 0.9]
                 }}
-                className={css.title}>{test.title}</motion.h4>
+                className={css.title}>{project.title}</motion.h4>
                 <motion.div
                 initial={{
                     y: "-50%",
@@ -52,28 +77,52 @@ export default function ProjectPage({id, location}) {
                     duration: 1.4,
                     ease: [0.6, 0.01, -0.05, 0.9]
                 }}
-                className={css.imgBg} >
-                    {/* ! insert image here */}
+                className={css.banner} >
+                    <motion.div initial={{opacity: 0, scale: 1.1}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{
+                        delay: 2,
+                        ease: [0.6, 0.01, -0.05, 0.9]
+                    }}
+                    className={css.bannerInner}>
+                        {/* config image */}
+                        <GatsbyImage
+                        image={project.bannerImage.localFile.childImageSharp.gatsbyImageData}
+                        alt={project.title}
+                        // height={600}
+                        style={{
+                            margin: '0 auto'
+                        }}
+                        />
+                    </motion.div>
                 </motion.div>
                 <div className={css.descWrapper}>
                     <span className={css.info}>info /</span>
                     <p className={css.description}>
-                    {test.description}
+                    {project.description}
                     </p>
-                    <span className={css.year}>2020</span>
+                    <span className={css.year}>{project.year}</span>
                 </div>
                 <div className={css.detailsWrapper}>
                     <div className={css.detailsContent}>
                         <span>The Challenge</span>
-                        <p>{test.description}</p>
+                        <p>{project.challenge}</p>
                     </div>
                     <div className={css.detailsContent}>
                         <span>The Solution</span>
-                        <p>{test.description}</p>
+                        <p>{project.solution}</p>
                     </div>
                 </div>
                 <div className={css.imgsWrapper}>
-                    {/* imgs */}
+                    {project.contentImages.map((image, index) => {
+                        return (
+                            <GatsbyImage
+                            image={image.localFile.childImageSharp.gatsbyImageData}
+                            alt={project.title}
+                            key={`image-${index}`}
+                            />
+                        )
+                    })}
                 </div>
                 <ExternalLink text='View Demo'
                 to='github.com'

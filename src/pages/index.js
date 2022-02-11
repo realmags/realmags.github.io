@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 
 import Seo from "../components/seo"
@@ -20,12 +18,6 @@ const IndexPage = () => (
       <Project />
       <Contact />
     </motion.main>
-    <p>
-      <Link to="/project-page/">Go to project page</Link> <br />
-      {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link> */}
-    </p>
     <footer
       style={{
         marginTop: `2rem`,
