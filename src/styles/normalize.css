@@ -1,25 +1,6 @@
-/* ! Edit to use google fonts */
-@font-face {
-  font-family: 'Playfair Display Variable';
-  src: url('../assets/PlayfairDisplay-VariableFont_wght.ttf');
-  font-style: normal;
-  font-weight: 400 900;
-}
-@font-face {
-  font-family: 'Playfair Display Variable Italic';
-  src: url('../assets/PlayfairDisplay-Italic-VariableFont_wght.ttf');
-  /* font-style: normal; */
-  font-weight: 400 900;
-}
-
-em {
-  font-family: 'Playfair Display Variable Italic';
-}
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -28,8 +9,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Playfair Display Variable', 'Times New Roman', Times, serif;
-  font-weight: normal;
+  font-family: "Playfair DisplayVariable", 'Times New Roman', Times, serif;
+  font-weight: 400 900;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt", "wght";
