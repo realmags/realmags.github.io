@@ -14,7 +14,7 @@ import { AnimatePresence } from "framer-motion"
 
 import "@fontsource/playfair-display/variable.css"
 import "@fontsource/playfair-display/variable-italic.css"
-import "@fontsource/raleway"
+import "@fontsource/raleway/variable.css"
 import '../styles/normalize.css'
 import * as css from '../styles/layout.module.css'
 

@@ -19,6 +19,7 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt", "wght";
   overflow-x: hidden;
   height: auto;
+  background-color: #FEF1E6;
 }
 article,
 aside,

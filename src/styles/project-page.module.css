@@ -84,21 +84,21 @@
 .description {
     width: 580px;
     max-width: 60%;
-    font-family: "Raleway", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "RalewayVariable", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1rem;
 }
 
 .year {
     font-size: 0.8rem;
     font-weight: bold;
-    font-family: "Raleway", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "RalewayVariable", Verdana, Geneva, Tahoma, sans-serif;
     align-self: flex-end;
 }
 
 .detailsWrapper {
     display: flex;
     justify-content: space-between;
-    font-family: "Raleway", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "RalewayVariable", Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 6rem;
     margin-bottom: 4rem;
     column-gap: 1rem;

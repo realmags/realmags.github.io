@@ -60,9 +60,6 @@ export default function Project() {
 }
 
 const ProjectCard = ({title, tags, slug, bannerImage, isEven}) => {
-    // const [ref, imageDims] = useDimensions()
-    console.log(bannerImage)
-
     return (
         <Link to={`/projects/${slug}`} >
             <div className={`${css.card} ${isEven ? css.transform : ''}`}>
