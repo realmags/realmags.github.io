@@ -11,7 +11,7 @@ import Contact from "../components/contact"
 const IndexPage = () => (
   <>
     <Header />
-    <motion.main exit={{opacity: 0}}>
+    <motion.main exit={{opacity: 0}} id='main'>
       <Seo title="Home" />
       <Banner />
       <About />
