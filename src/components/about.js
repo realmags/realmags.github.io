@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Section from './section';
 import * as css from '../styles/about.module.css'
+import * as grid from '../styles/grid.module.css'
 
 import Java from '../assets/java.inline.svg'
 import CLang from '../assets/c-prog.inline.svg'
@@ -48,7 +49,7 @@ export default function About() {
                     </h3>
                     <div className={css.techWrapper}>
                         <div className={css.techCard}>
-                            <div className={`${css.techInner} ${css.technologies}`}>
+                            <div className={`${css.techInner} ${grid.technologies}`}>
                                 <Icon id={'react'} icon={<ReactWeb />} label='React' />
                                 <Icon id={'gatsby'} icon={<Gatsby />} label='Gatsby' />
                                 <Icon id={'html'} icon={<Html />} label='HTML' />
@@ -60,7 +61,7 @@ export default function About() {
                             <p>Web Technologies</p>
                         </div>
                         <div className={css.techCard}>
-                            <div className={`${css.techInner} ${css.process}`}>
+                            <div className={`${css.techInner} ${grid.process}`}>
                                 <Icon id="development" icon={<Dev />} label='Development' />
                                 <Icon id="ui" icon={<UiDesign />} label='UI Design' />
                                 <Icon id="prototype" icon={<Prototype />} label='Prototyping' />
@@ -68,7 +69,7 @@ export default function About() {
                             <p>Process</p>
                         </div>
                         <div className={css.techCard}>
-                            <div className={`${css.techInner} ${css.others}`}>
+                            <div className={`${css.techInner} ${grid.others}`}>
                                 <Icon id="ml" icon={<MachineLearning />} label='Machine Learning' />
                                 <Icon id="c" icon={<CLang />} label='C' />
                                 <Icon id="java" icon={<Java />} label='Java' />
@@ -84,7 +85,7 @@ export default function About() {
 
 const Icon = ({icon, id, label}) => {
     return (
-        <span className={`${css[id]} ${css.iconWrapper}`}>
+        <span className={`${grid[id]} ${css.iconWrapper}`}>
             <span className={css.icon}>
                 {icon}
             </span>

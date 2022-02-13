@@ -1,0 +1,56 @@
+.technologies {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "react js html"
+      "css gatsby php"
+      ". laravel .";
+  }
+
+.react { grid-area: react; }
+
+.gatsby { grid-area: gatsby; }
+
+.html { grid-area: html; }
+
+.css { grid-area: css; }
+
+.js { grid-area: js; }
+
+.php { grid-area: php; }
+
+.laravel { grid-area: laravel; }
+
+.process {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "development ui"
+      "prototype .";
+  }
+    
+.development { grid-area: development; }
+
+.ui { grid-area: ui; }
+
+.prototype { grid-area: prototype; }
+
+.others {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "ml c"
+      ". java";
+}
+
+.ml { grid-area: ml; }
+
+.c { grid-area: c; }
+
+.java { grid-area: java; }
