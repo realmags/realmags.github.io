@@ -32,15 +32,15 @@ fragment Asset on Asset {
       stage
     }
   }
-  bannerImageProject {
-    ... on Project {
+  thumbnailPost {
+    ... on Post {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
   }
-  contentImagesProject {
-    ... on Project {
+  galleryPost {
+    ... on Post {
       remoteTypeName: __typename
       remoteId: id
       stage

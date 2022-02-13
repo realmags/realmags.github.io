@@ -43,7 +43,7 @@ fragment ScheduledOperation on ScheduledOperation {
       locale
       stage
     }
-    ... on Project {
+    ... on Post {
       remoteTypeName: __typename
       remoteId: id
       stage

@@ -3,8 +3,8 @@ exports.createPages = async ({ graphql, actions: {createPage} }) => {
   const {
     data: {projects},
   } = await graphql(`
-    query AllProjects {
-      projects: allGraphCmsProject {
+    query AllPosts {
+      projects: allGraphCmsPost {
         nodes {
           id
           slug

@@ -8,20 +8,21 @@ import Section from './section'
 import * as css from '../styles/project.module.css'
 
 export default function Project() {
+    // ! sort query by rank
     const {projects} = useStaticQuery(graphql`
-        query AllProjects {
-            projects: allGraphCmsProject {
+        query AllPosts {
+            projects: allGraphCmsPost {
                 nodes {
                     title
                     tags
                     slug
-                    bannerImage {
+                    thumbnail {
                         localFile {
                             childImageSharp {
                                 gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
                             }
                         }
-                        url
+                        fileName
                     }
                 }
             }
@@ -31,7 +32,7 @@ export default function Project() {
     return (
         <Section title='Projects' to='projects'>
             <div className={css.container}>
-                {projects.nodes.map(({title, tags, slug, bannerImage}, index) => {
+                {projects.nodes.map(({title, tags, slug, thumbnail}, index) => {
                     if(index % 2 !== 0) {
                         return (
                             <ProjectCard
@@ -39,7 +40,7 @@ export default function Project() {
                             slug={slug}
                             title={title}
                             tags={tags.join(', ')}
-                            bannerImage={bannerImage}
+                            thumbnail={thumbnail}
                             isEven
                             />
                             )
@@ -50,7 +51,7 @@ export default function Project() {
                             slug={slug}
                             title={title}
                             tags={tags.join(', ')}
-                            bannerImage={bannerImage}
+                            thumbnail={thumbnail}
                         />
                     )
                 })}
@@ -59,15 +60,15 @@ export default function Project() {
     );
 }
 
-const ProjectCard = ({title, tags, slug, bannerImage, isEven}) => {
+const ProjectCard = ({title, tags, slug, thumbnail, isEven}) => {
     return (
         <Link to={`/projects/${slug}`} >
             <div className={`${css.card} ${isEven ? css.transform : ''}`}>
                 {/* this is wrapper for image for animation */}
                 <div className={css.imgBg} >
                     <GatsbyImage 
-                    image={bannerImage.localFile.childImageSharp.gatsbyImageData}
-                    alt={title}
+                    image={thumbnail.localFile.childImageSharp.gatsbyImageData}
+                    alt={thumbnail.fileName}
                     style={{
                         background: 'transparent'
                     }}
@@ -84,6 +85,6 @@ ProjectCard.propTypes = {
     title: PropTypes.string.isRequired,
     tags: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
-    bannerImage: PropTypes.object.isRequired,
+    thumbnail: PropTypes.object.isRequired,
     isEven: PropTypes.bool
 }

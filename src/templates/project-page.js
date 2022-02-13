@@ -9,27 +9,30 @@ import Seo from '../components/seo'
 import { BackIcon, ExternalLinkIcon } from '../assets/svg-files';
 
 export const query = graphql`
-    query ProductQuery($id: String!) {
-        project: graphCmsProject(id: {eq: $id}) {
+    query PostQuery($id: String!) {
+        project: graphCmsPost(id: {eq: $id}) {
             title
             description
             tags
             year
+            link
             solution
             challenge
-            bannerImage {
+            thumbnail {
                 localFile {
                     childImageSharp {
                     gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR, height: 600)
                     }
                 }
+                fileName
             }
-            contentImages {
+            gallery {
                 localFile {
                     childImageSharp {
                     gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR, height: 600)
                     }
                 }
+                fileName
             }
         }
     }
@@ -38,7 +41,7 @@ export const query = graphql`
 export default function ProjectPage({data: {project}}) {
     return (
         <div> 
-            <Seo title='Project' />
+            <Seo title={project.title} />
             <InternalLink text='Back' to='/' icon={<BackIcon />} />
             <article className={css.contentWrapper}>
                 <motion.h4 
@@ -86,8 +89,8 @@ export default function ProjectPage({data: {project}}) {
                     className={css.bannerInner}>
                         {/* config image */}
                         <GatsbyImage
-                        image={project.bannerImage.localFile.childImageSharp.gatsbyImageData}
-                        alt={project.title}
+                        image={project.thumbnail.localFile.childImageSharp.gatsbyImageData}
+                        alt={project.thumbnail.fileName}
                         // height={600}
                         style={{
                             margin: '0 auto'
@@ -113,12 +116,12 @@ export default function ProjectPage({data: {project}}) {
                     </div>
                 </div>
                 <div className={css.imgsWrapper}>
-                    {project.contentImages.map((image, index) => {
+                    {project.gallery.map((image, index) => {
                         return (
                             <GatsbyImage
                             image={image.localFile.childImageSharp.gatsbyImageData}
-                            alt={project.title}
-                            key={`image-${index}`}
+                            alt={project.fileName}
+                            key={`gallery-${index}`}
                             />
                         )
                     })}
