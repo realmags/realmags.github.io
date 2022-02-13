@@ -6,9 +6,9 @@ import * as css from '../styles/about.module.css'
 
 import Java from '../assets/java.inline.svg'
 import CLang from '../assets/c-prog.inline.svg'
-import ML from '../assets/machine-learning.inline.svg'
+import MachineLearning from '../assets/machine-learning.inline.svg'
 import Dev from '../assets/dev.inline.svg'
-import UI from '../assets/ui.inline.svg'
+import UiDesign from '../assets/ui.inline.svg'
 import Prototype from '../assets/proto.inline.svg'
 import ReactWeb from '../assets/react.inline.svg'
 import Gatsby from '../assets/gatsby.inline.svg'
@@ -16,7 +16,7 @@ import Html from '../assets/html5.inline.svg'
 import Css from '../assets/css3.inline.svg'
 import Php from '../assets/php.inline.svg'
 import Laravel from '../assets/laravel.inline.svg'
-import JS from '../assets/javascript.inline.svg'
+import Javascript from '../assets/javascript.inline.svg'
 
 export default function About() {
     return (
@@ -53,7 +53,7 @@ export default function About() {
                                 <Icon id={'gatsby'} icon={<Gatsby />} label='Gatsby' />
                                 <Icon id={'html'} icon={<Html />} label='HTML' />
                                 <Icon id={'css'} icon={<Css />} label='CSS' />
-                                <Icon id={'js'} icon={<JS />} label='JavaScript' />
+                                <Icon id={'js'} icon={<Javascript />} label='JavaScript' />
                                 <Icon id={'php'} icon={<Php />} label='PHP' />
                                 <Icon id={'laravel'} icon={<Laravel />} label='Laravel' />
                             </div>
@@ -62,14 +62,14 @@ export default function About() {
                         <div className={css.techCard}>
                             <div className={`${css.techInner} ${css.process}`}>
                                 <Icon id="development" icon={<Dev />} label='Development' />
-                                <Icon id="ui" icon={<UI />} label='UI Design' />
+                                <Icon id="ui" icon={<UiDesign />} label='UI Design' />
                                 <Icon id="prototype" icon={<Prototype />} label='Prototyping' />
                             </div>
                             <p>Process</p>
                         </div>
                         <div className={css.techCard}>
                             <div className={`${css.techInner} ${css.others}`}>
-                                <Icon id="ml" icon={<ML />} label='Machine Learning' />
+                                <Icon id="ml" icon={<MachineLearning />} label='Machine Learning' />
                                 <Icon id="c" icon={<CLang />} label='C' />
                                 <Icon id="java" icon={<Java />} label='Java' />
                             </div>

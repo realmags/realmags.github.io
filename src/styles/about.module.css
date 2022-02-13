@@ -90,6 +90,8 @@
 
 .label {
     font-size: 0.8rem;
+    text-align: center;
+    line-height: initial;
 }
 
 .technologies {  display: grid;
@@ -139,8 +141,8 @@
     gap: 0;
     grid-auto-flow: row;
     grid-template-areas:
-      "ml ml"
-      "c java";
+      "ml c"
+      ". java";
 }
 
 .ml { grid-area: ml; }

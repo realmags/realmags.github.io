@@ -8,7 +8,6 @@ import Seo from '../components/seo'
 
 import { BackIcon, ExternalLinkIcon } from '../assets/svg-files';
 
-
 export const query = graphql`
     query ProductQuery($id: String!) {
         project: graphCmsProject(id: {eq: $id}) {
@@ -38,7 +37,7 @@ export const query = graphql`
 
 export default function ProjectPage({data: {project}}) {
     return (
-        <div className={css.container}> 
+        <div> 
             <Seo title='Project' />
             <InternalLink text='Back' to='/' icon={<BackIcon />} />
             <article className={css.contentWrapper}>
@@ -155,7 +154,9 @@ const ExternalLink = ({text, icon, to}) => {
 const Button = ({text, icon, isReverse, isIconSmall}) => {
     return (
         <span className={`${css.bttnWrapper} ${isReverse ? css.rowReverse : ''}`}>
-            <span className={`${isIconSmall ? css.smallIcon : css.normalIcon}`}>{icon}</span>
+            <span className={`${isIconSmall ? css.smallIcon : css.normalIcon}`}>
+                {icon}
+            </span>
             <button>{text}</button>
         </span>
     )

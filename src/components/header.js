@@ -6,7 +6,7 @@ import {AnchorLink} from 'gatsby-plugin-anchor-links'
 import {motion} from 'framer-motion'
 
 import * as css from '../styles/header.module.css'
-import {LogoBg} from '../assets/svg-files'
+import LogoBg from '../assets/logo-bg.inline.svg'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -36,7 +36,9 @@ const Header = () => {
     // }}
     className={css.header}>
       <span className={css.titleContainer}>
-        <LogoBg />
+        <span className={css.titleBg}>
+          <LogoBg />
+        </span>
         <span className={css.titleText}>{data.site.siteMetadata?.title || `Title`}</span>
       </span>
       <nav>

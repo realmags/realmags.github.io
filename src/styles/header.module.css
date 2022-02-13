@@ -13,6 +13,10 @@
     display: flex;
 }
 
+.titleBg {
+    max-width: 90px;
+}
+
 .titleText {
     text-transform: uppercase;
     position: absolute;
