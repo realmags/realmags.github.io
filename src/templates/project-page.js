@@ -123,9 +123,11 @@ export default function ProjectPage({data: {project}}) {
                         )
                     })}
                 </div>
-                <ExternalLink text='View Demo'
-                to={'#'}
-                icon={<ExternalLinkIcon />} />
+                {project.link ? 
+                    <ExternalLink text='View Demo'
+                    to={project.link}
+                    icon={<ExternalLinkIcon />} /> : null
+                }
             </article>
         </div>
     )

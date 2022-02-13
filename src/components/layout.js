@@ -17,6 +17,7 @@ import "@fontsource/playfair-display/variable-italic.css"
 import "@fontsource/raleway/variable.css"
 import '../styles/normalize.css'
 import * as css from '../styles/layout.module.css'
+import Footer from '../components/footer'
 
 const Layout = ({ children }) => {
   return (
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
       <div className={css.wrapper}>
         <div className={css.layout}>
           {children}
+          <Footer />
         </div>
       </div>
     </AnimatePresence>
