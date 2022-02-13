@@ -15,19 +15,19 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-anchor-links`,
     {
-      resolve: `gatsby-source-graphcms`,
-      options: {
-        downloadLocalImages: true,
-        endpoint: process.env.GRAPHCMS_ENDPOINT,
-      },
-    },
-    {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /\.inline\.svg$/
         }
       }
+    },
+    {
+      resolve: `gatsby-source-graphcms`,
+      options: {
+        downloadLocalImages: true,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

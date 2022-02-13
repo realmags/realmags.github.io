@@ -125,7 +125,7 @@ export default function ProjectPage({data: {project}}) {
                     })}
                 </div>
                 <ExternalLink text='View Demo'
-                to='github.com'
+                to={'#'}
                 icon={<ExternalLinkIcon />} />
             </article>
         </div>
