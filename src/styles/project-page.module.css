@@ -101,7 +101,7 @@
     font-family: "RalewayVariable", Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 6rem;
     margin-bottom: 4rem;
-    column-gap: 1rem;
+    column-gap: 3rem;
 }
 
 .detailsContent span {
@@ -109,6 +109,11 @@
     text-transform: uppercase;
     margin-right: 3.5rem;
     float: left;
+}
+
+.detailsContent p {
+    text-align: justify;
+    line-height: 1.4;
 }
 
 .imgsWrapper {
