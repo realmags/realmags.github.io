@@ -4,6 +4,7 @@
 
 .mail {
     text-align: left;
+    position: relative;
 }
 
 .mail h3 {
@@ -19,6 +20,19 @@
 .emphasis {
     border: 1px solid #90AACB;
     border-radius: 80%;
+}
+
+.social {
+    --icon-size: 50px;
+    position: absolute;
+    left: var(--left-val);
+    top: 100%;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    padding: 10px;
+    border: 2px solid #90AACB;
+    border-radius: 50%;
+    z-index: 10;
 }
 
 @media (max-width: 699px) {

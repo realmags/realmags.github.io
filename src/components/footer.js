@@ -7,7 +7,7 @@ export default function Footer() {
         style={{
             display: 'flex',
             justifyContent: 'space-between',
-            marginTop: '4rem'
+            marginTop: '5rem'
         }}
         >
             <p>© 2022 Cagayan de Oro</p>
