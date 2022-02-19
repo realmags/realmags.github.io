@@ -11,7 +11,7 @@ export default function Project() {
     // ! sort query by rank
     const {projects} = useStaticQuery(graphql`
         query AllPosts {
-            projects: allGraphCmsPost {
+            projects: allGraphCmsPost(sort: {fields: rank}) {
                 nodes {
                     title
                     tags

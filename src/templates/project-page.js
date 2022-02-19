@@ -41,7 +41,7 @@ export const query = graphql`
 export default function ProjectPage({data: {project}}) {
     return (
         <div> 
-            <Seo title={project.title} />
+            <Seo title={project.title} description={project.description} />
             <InternalLink text='Back' to='/' icon={<BackIcon />} />
             <article className={css.contentWrapper}>
                 <motion.h4 

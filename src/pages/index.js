@@ -12,7 +12,7 @@ const IndexPage = () => (
   <>
     <Header />
     <motion.main exit={{opacity: 0}} id='main'>
-      <Seo title="Home" />
+      <Seo title="Developer" />
       <Banner />
       <About />
       <Project />

@@ -5,9 +5,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `KBCM`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    description: `Hi! I am Kent Bryan C. Maglinao, a front-end developer and computer engineer. Creating beautiful websites is my game!`,
+    author: `@realmags`,
+    siteUrl: `https://realmags.github.io/`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
