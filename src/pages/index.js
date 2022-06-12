@@ -11,8 +11,8 @@ import Contact from "../components/contact"
 const IndexPage = () => (
   <>
     <Header />
-    <motion.main exit={{opacity: 0}} id='main'>
-      <Seo title="Developer" />
+    <motion.main exit={{ opacity: 0 }} id="main">
+      <Seo title="Fullstack Developer" />
       <Banner />
       <About />
       <Project />
